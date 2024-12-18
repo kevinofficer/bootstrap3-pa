@@ -1,11 +1,19 @@
 {
   "name": "bootstrap3-pa",
   "version": "1.0.0",
-  "main": "dist/bootstrap-pa.js",
+  "main": "dist/bootstrap3-pa.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Kevin Officer",
   "license": "ISC",
-  "description": ""
+  "description": "Bootstrap 3.4.1 security patch",
+  "dependencies": {
+    "dompurify": "3.2.3"
+  }
 }
