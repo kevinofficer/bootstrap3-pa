@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap3-pa",
+  "version": "1.0.0",
+  "main": "dist/bootstrap-pa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
