@@ -10,10 +10,6 @@
   XXS - https://security.snyk.io/vuln/SNYK-JS-BOOTSTRAP-7444617
   XXS - https://security.snyk.io/vuln/SNYK-JS-BOOTSTRAP-7444593
   */
-
-  if (typeof DOMPurify === 'undefined') {
-    throw new Error('Bootstrap\'s XSS Patched JavaScript requires DOMPurify')
-  }
   
   if (typeof jQuery === 'undefined') {
     throw new Error('Bootstrap\'s JavaScript requires jQuery')
