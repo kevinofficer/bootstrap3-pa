@@ -19,27 +19,13 @@
   const DOMPurify = typeof window !== 'undefined' && window.DOMPurify ? window.DOMPurify : require('dompurify');
   
   // Example utility functions using DOMPurify
-  export function sanitizeHref(href) {
+  function sanitizeHref(href) {
     return DOMPurify.sanitize(href);
   }
   
-  export function sanitizeDataTarget(dataTarget) {
+  function sanitizeDataTarget(dataTarget) {
     return DOMPurify.sanitize(dataTarget);
   }
-  
-  // Example usage in patched Bootstrap logic
-  function exampleBootstrapLogic(href, dataTarget) {
-    const safeHref = sanitizeHref(href);
-    const safeTarget = sanitizeDataTarget(dataTarget);
-    console.log('Safe Href:', safeHref);
-    console.log('Safe Target:', safeTarget);
-  }
-  
-  // Default export for module-based usage
-  export default {
-    sanitizeHref,
-    sanitizeDataTarget
-  };
   
   +function ($) {
     'use strict';
@@ -549,7 +535,7 @@
   
       // Sanitize href using DOMPurify
       if (href) {
-        href = DOMPurify.sanitize(href); // Removes dangerous parts of the URL
+        href = sanitizeHref(href); // Removes dangerous parts of the URL
         if (/^javascript:/i.test(href)) { // Block javascript: URLs
           console.warn('Blocked potentially malicious javascript link:', href);
           e.preventDefault();
@@ -559,7 +545,7 @@
   
       var target = $this.attr('data-target') || href;
       if (target) {
-        target = DOMPurify.sanitize(target); // Sanitize data-target
+        target = sanitizeDataTarget(target); // Sanitize data-target
       }
   
       var $target = $(document).find(target);
@@ -2459,7 +2445,7 @@
   
       // Sanitize href using DOMPurify
       if (href) {
-        href = DOMPurify.sanitize(href); // Removes dangerous parts of the URL
+        href = sanitizeHref(href); // Removes dangerous parts of the URL
         if (/^javascript:/i.test(href)) { // Block javascript: URLs
           console.warn('Blocked potentially malicious javascript link:', href);
           e.preventDefault();
@@ -2469,7 +2455,7 @@
   
       var target = $this.attr('data-target') || href;
       if (target) {
-        target = DOMPurify.sanitize(target); // Sanitize data-target
+        target = sanitizeDataTarget(target); // Sanitize data-target
       }
   
       var $target = $(document).find(target);
