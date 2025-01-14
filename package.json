@@ -1,6 +1,6 @@
 {
   "name": "bootstrap3-pa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/bootstrap3-pa.js",
   "files": [
     "dist",
