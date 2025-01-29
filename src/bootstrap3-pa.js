@@ -125,7 +125,7 @@
       $(el).on('click', dismiss, this.close)
     }
   
-    Alert.VERSION = '3.4.1'
+    Alert.VERSION = 'bootstrap3-pa@1.0.2'
   
     Alert.TRANSITION_DURATION = 150
   
@@ -222,7 +222,7 @@
       this.isLoading = false
     }
   
-    Button.VERSION  = '3.4.1'
+    Button.VERSION  = 'bootstrap3-pa@1.0.2'
   
     Button.DEFAULTS = {
       loadingText: 'loading...'
@@ -365,7 +365,7 @@
           .on('mouseleave.bs.carousel', $.proxy(this.cycle, this))
     }
   
-    Carousel.VERSION  = '3.4.1'
+    Carousel.VERSION  = 'bootstrap3-pa@1.0.2'
   
     Carousel.TRANSITION_DURATION = 600
   
@@ -629,7 +629,7 @@
       if (this.options.toggle) this.toggle()
     }
   
-    Collapse.VERSION  = '3.4.1'
+    Collapse.VERSION  = 'bootstrap3-pa@1.0.2'
   
     Collapse.TRANSITION_DURATION = 350
   
@@ -831,7 +831,7 @@
       $(element).on('click.bs.dropdown', this.toggle)
     }
   
-    Dropdown.VERSION = '3.4.1'
+    Dropdown.VERSION = 'bootstrap3-pa@1.0.2'
   
     function getParent($this) {
       var selector = $this.attr('data-target')
@@ -1012,7 +1012,7 @@
       }
     }
   
-    Modal.VERSION = '3.4.1'
+    Modal.VERSION = 'bootstrap3-pa@1.0.2'
   
     Modal.TRANSITION_DURATION = 300
     Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -1493,7 +1493,7 @@
       this.init('tooltip', element, options)
     }
   
-    Tooltip.VERSION  = '3.4.1'
+    Tooltip.VERSION  = 'bootstrap3-pa@1.0.2'
   
     Tooltip.TRANSITION_DURATION = 150
   
@@ -2034,7 +2034,7 @@
   
     if (!$.fn.tooltip) throw new Error('Popover requires tooltip.js')
   
-    Popover.VERSION  = '3.4.1'
+    Popover.VERSION  = 'bootstrap3-pa@1.0.2'
   
     Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
       placement: 'right',
@@ -2167,7 +2167,7 @@
       this.process()
     }
   
-    ScrollSpy.VERSION  = '3.4.1'
+    ScrollSpy.VERSION  = 'bootstrap3-pa@1.0.2'
   
     ScrollSpy.DEFAULTS = {
       offset: 10
@@ -2331,7 +2331,7 @@
       // jscs:enable requireDollarBeforejQueryAssignment
     }
   
-    Tab.VERSION = '3.4.1'
+    Tab.VERSION = 'bootstrap3-pa@1.0.2'
   
     Tab.TRANSITION_DURATION = 150
   
@@ -2498,7 +2498,7 @@
       this.checkPosition()
     }
   
-    Affix.VERSION  = '3.4.1'
+    Affix.VERSION  = 'bootstrap3-pa@1.0.2'
   
     Affix.RESET    = 'affix affix-top affix-bottom'
   
